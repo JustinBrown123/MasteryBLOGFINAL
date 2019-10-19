@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasteryBlog2", "MasteryBlog2\MasteryBlog2.csproj", "{A94F6DE1-526F-46CF-87F3-DCD693719103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasteryBlog2.Tests", "MasteryBlog2.Tests\MasteryBlog2.Tests.csproj", "{CC69E9AE-9576-4DB6-9640-1104AA7EEDF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A94F6DE1-526F-46CF-87F3-DCD693719103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A94F6DE1-526F-46CF-87F3-DCD693719103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A94F6DE1-526F-46CF-87F3-DCD693719103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A94F6DE1-526F-46CF-87F3-DCD693719103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC69E9AE-9576-4DB6-9640-1104AA7EEDF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC69E9AE-9576-4DB6-9640-1104AA7EEDF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC69E9AE-9576-4DB6-9640-1104AA7EEDF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC69E9AE-9576-4DB6-9640-1104AA7EEDF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CA1E584-076D-412E-B5B9-770BDFD373D0}
+	EndGlobalSection
+EndGlobal

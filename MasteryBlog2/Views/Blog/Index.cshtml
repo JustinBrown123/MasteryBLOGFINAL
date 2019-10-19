@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MasteryBlog2.Model.Blog>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <h2>MY BLOG PAGE!!!!</h2>
+    <div id="blog">
+        @foreach (var blog in Model)
+        {
+            <article>
+
+
+                @blog.Body
+
+
+            </article>
+        }
+    </div>
+
+
+    <footer>
+        &copy; 2019 JUSTREV
+    </footer>
+
+</body>
+</html>
