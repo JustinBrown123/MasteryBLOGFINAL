@@ -12,19 +12,31 @@
 </head>
 <body>
     <h2>MY BLOG PAGE!!!!</h2>
+    <div id="Intro">
+        <p>Welcome to the Page thats all about books of all kinds!!</p>
+        <p>Check out all the latest opinions below!! click on it to see what the </p>
+
+    </div>
     <div id="blog">
         @foreach (var blog in Model)
         {
             <article>
-
-
-                @blog.Body
-
-
+                <h3>@blog.Title</h3>
+                <p>By blogger: @blog.Reviewer  </p>
+                <p><img src="@blog.Image" /></p>
+                <p><a href="/Blog/Details/@blog.Id"><span> @blog.Body</span></a></p> <div id="date/time"> Left at @blog.DateTime</div>
             </article>
         }
-    </div>
 
+    </div>
+    <p>Let us know what your reading and your opinions by clicking a link!!!</p>
+
+    <nav>
+        <a href="/Blog/Index">HomePage</a>
+        <a href="/Tag/Index">Tags</a>
+        <a href="/Blog/Create">Create a BLOG!!!</a>
+        <a href="/Blog/edit">Edit/Delete</a>    
+    </nav>
 
     <footer>
         &copy; 2019 JUSTREV
