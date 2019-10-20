@@ -1,0 +1,23 @@
+body{
+    font-family:sans-serif, Arial;
+    background-color: #b2aeae;
+    
+}
+
+.blogIMG{
+    height: 320px;
+    width: 260px;
+}
+h1 {
+    padding: 20px;
+    text-align: center;
+    background: #0a0909;
+    color: whitesmoke;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background: #0a0909;
+    color: whitesmoke;
+}
