@@ -4,16 +4,15 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace MasteryBlog2.Repositories
 {
     public class CategoryRepository : IRepository<Category>
     {
 
-        private DbContext db;
+        private BlogContext db;
 
-        public CategoryRepository(DbContext db)
+        public CategoryRepository(BlogContext db)
         {
             this.db = db;
         }
@@ -23,22 +22,17 @@ namespace MasteryBlog2.Repositories
             return db.Set<Category>().Count();
         }
 
-        public void Create(Category entity)
-        {
-            db.Set<Category>().Add(entity);
-            db.SaveChanges();
-        }
 
+        //public Category GetById(int id)
+        //{
+        //    return db.Set<Category>().Find(id);
+        //}
         public Category GetById(int id)
         {
-            return db.Set<Category>().Find(id);
+            return db.Categories.Single(b => b.Id == id);
         }
 
-        public void Delete(Category entity)
-        {
-            db.Set<Category>().Remove(entity);
-            db.SaveChanges();
-        }
+
 
         public void Save()
         {
@@ -47,7 +41,7 @@ namespace MasteryBlog2.Repositories
 
         public IEnumerable<Category> GetAll()
         {
-            return db.Set<Category>().ToList();
+            return db.Categories;
         }
 
         public void Edit(Category blog)
@@ -56,7 +50,18 @@ namespace MasteryBlog2.Repositories
         }
 
 
+
         public IEnumerable<Category> GetByTagID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Create(Category obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Category obj)
         {
             throw new NotImplementedException();
         }

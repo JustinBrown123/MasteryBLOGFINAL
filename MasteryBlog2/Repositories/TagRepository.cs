@@ -1,4 +1,5 @@
-﻿using MasteryBlog2.Model;
+﻿using MasteryBlog2.Data;
+using MasteryBlog2.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ namespace MasteryBlog2.Repositories
     public class TagRepository : IRepository<Tag>
     {
 
-        private DbContext db;
+        private BlogContext db;
 
-        public TagRepository(DbContext db)
+        public TagRepository(BlogContext db)
         {
             this.db = db;
         }

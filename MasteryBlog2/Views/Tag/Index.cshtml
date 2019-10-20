@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MasteryBlog2.Model.Tag>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Styles/Style.css" />
+
+</head>
+<body>
+    <h1>Tags</h1>
+    <div>
+
+        <section id="Tag">
+            @foreach (var tag in Model)
+            {
+
+                <article>
+                    <p><a href="/Blog/BlogByTagID/@tag.Id">@tag.Content</a></p>
+                </article>
+            }
+        </section>
+        <nav>
+            <a href="/Blog/Index">HomePage</a>
+            <a href="/Category/index">Category</a>
+            <a href="/Tag/Index">Tags</a>
+            <a href="/Blog/Create">Create a BLOG!!!</a>
+            <a href="/Blog/edit">Edit/Delete</a>
+        </nav>
+
+        <footer>
+            &copy; 2019 JUSTREV
+        </footer>
+
+</body>
+</html>
