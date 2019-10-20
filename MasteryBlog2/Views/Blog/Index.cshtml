@@ -8,10 +8,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>View</title>
+    <title>Book Bro's Blog Site</title>
+    <link rel="stylesheet" href="~/Styles/Style.css" />
 </head>
 <body>
-    <h2>MY BLOG PAGE!!!!</h2>
+    <h1>Book Bro's Blogs</h1>
     <div id="Intro">
         <p>Welcome to the Page thats all about books of all kinds!!</p>
         <p>Check out all the latest opinions below!! click on it to see what the </p>
@@ -21,11 +22,21 @@
         @foreach (var blog in Model)
         {
             <article>
-                <h3>@blog.Title</h3>
-                <p>By blogger: @blog.Reviewer  </p>
-                <p><img src="@blog.Image" /></p>
-                <p><a href="/Blog/Details/@blog.Id"><span> @blog.Body</span></a></p> <div id="date/time"> Left at @blog.DateTime</div>
+                <div class="flex-container">
+                    <div class="card">
+                        <div>
+                            <h2>@blog.Title</h2>
+                            <p>By blogger: @blog.Reviewer  </p>
+                            <p><img class="blogIMG" img src="@blog.Image" />
+                        </div>
+                        <div>
+                            <p><span>@blog.Id"></span>@blog.Id"<span> @blog.Body</span></p>
+                        </div>
+                    </div>
+                </div>
+                        <p><div id="date/time"> Left at @blog.DateTime</div></p>
             </article>
+
         }
 
     </div>
@@ -40,7 +51,7 @@
     </nav>
 
     <footer>
-        &copy; 2019 JUSTREV
+        &copy; 2019 Book Bro's Blog
     </footer>
 
 </body>

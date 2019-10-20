@@ -10,11 +10,15 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
+    <title>BBB-S: Create a Review</title>
+    <link rel="stylesheet" href="~/Styles/Style.css" />
+
 </head>
 <body>
 
-    <h4>Blog</h4>
+    <h1>Create a Blog</h1>
+    <p>Write what you think about a book!</p>
+    <p>We want to hear what YOU have to say.</p>
     <hr />
     <div class="row">
         <div class="col-md-4">
@@ -26,22 +30,22 @@
                     <span asp-validation-for="Id" class="text-danger"></span>*@
                 </div>
                 <div class="form-group">
-                    <label asp-for="Image" class="control-label">Put a url for an image</label>
-                    <input asp-for="Image" class="form-control" />
-                    <span asp-validation-for="Image" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Title" class="control-label">What is the Title Of the Book</label>
+                    <label asp-for="Title" class="control-label">What is the Title Of the Book?:</label>
                     <input asp-for="Title" class="form-control" />
                     <span asp-validation-for="Title" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Body" class="control-label">REVIEW IT!!!!</label>
+                    <label asp-for="Image" class="control-label">URL for your Book Image:</label>
+                    <input asp-for="Image" class="form-control" />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Body" class="control-label">Write your review:</label>
                     <input asp-for="Body" class="form-control" />
                     <span asp-validation-for="Body" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Reviewer" class="control-label">Your Name!!</label>
+                    <label asp-for="Reviewer" class="control-label">Your username:</label>
                     <input asp-for="Reviewer" class="form-control" />
                     <span asp-validation-for="Reviewer" class="text-danger"></span>
                 </div>
@@ -66,8 +70,14 @@
     </div>
 
     <div>
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index">Back to Books</a>
     </div>
 
+<footer>
+    &copy; 2019 Book Bro's Blog
+</footer>
+
 </body>
+
+
 </html>
