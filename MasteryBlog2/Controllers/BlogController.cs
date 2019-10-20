@@ -63,13 +63,13 @@ namespace MasteryBlog2.Controllers
             return View(model);
         }
 
-        //[HttpPost]
-        //public ActionResult Edit(Blog blog)
-        //{
-        //    blog.DateTime = DateTime.Now;
-        //    blogRepo.Edit(blog);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost]
+        public ActionResult Edit(Blog blog)
+        {
+         
+            blogRepo.Edit(blog);
+            return RedirectToAction("Index");
+        }
 
         [HttpGet]
         public ViewResult Edit(int id)

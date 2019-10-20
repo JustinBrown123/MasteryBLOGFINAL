@@ -21,16 +21,25 @@
             <p><img src="@blog.Image"></p>
             <p><span>@blog.Title</span></p>
             <p>Reviewer: <span>@blog.Reviewer</span></p>
-            <p class="genreGo">Genre: <a href="/Genre/Index/">@blog.CategoryId</a></p>
             <p>Blog: <span>@blog.Body</span></p>
             <p>Publish Date: <span>@blog.DateTime</span></p>
             @*<p class="tagGo">Tags: <a href="/Tag/Index/@blog.Tag.ID">@blog.BlogTags.First().</a></p>*@
 
         }
 
-        <p class="indexGo"><a href="/Blog/Index/">Index</a></p>
         <hr />
     </div>
-    </body>
+
+    <nav>
+        <a href="/Blog/Index">HomePage</a>
+        <a href="/Category/index">Category</a>
+        <a href="/Tag/Index">Tags</a>
+        <a href="/Blog/Create">Create a BLOG!!!</a>
+
+    </nav>
+    <footer>
+        &copy; 2019 Book Bro's Blog
+    </footer>
+</body>
 
 </html>
