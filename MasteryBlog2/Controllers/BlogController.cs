@@ -29,19 +29,19 @@ namespace MasteryBlog2.Controllers
             return View(model);
         }
 
-        public ViewResult BlogByTagID(int id)
+        public ViewResult BlogByTagId(int id)
         {
-            var model = blogRepo.GetByTagID(id);
+            var model = blogRepo.GetByTagId(id);
             return View(model);
         }
 
-        //[HttpPost]
-        //public ActionResult Create(Blog blog)
-        //{
-        //    blog.DateTime = DateTime.Now;
-        //    blogRepo.Create(blog);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost]
+        public ActionResult Create(Blog blog)
+        {
+            blog.DateTime = DateTime.Now;
+            blogRepo.Create(blog);
+            return RedirectToAction("Index");
+        }
 
         [HttpGet]
         public ViewResult Create()

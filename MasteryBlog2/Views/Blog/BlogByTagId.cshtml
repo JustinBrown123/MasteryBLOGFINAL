@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MasteryBlog2.Model.Blog>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Blogs By Tags</title>
+    <link rel="stylesheet" href="~/Styles/Style.css" />
+
+</head>
+<body>
+    <div>
+
+        @foreach (var blog in Model)
+        {
+            <p><img src="@blog.Image"></p>
+            <p><span>@blog.Title</span></p>
+            <p>Reviewer: <span>@blog.Reviewer</span></p>
+            <p class="genreGo">Genre: <a href="/Genre/Index/">@blog.Category.Genre</a></p>
+            <p>Blog: <span>@blog.Body</span></p>
+            <p>Publish Date: <span>@blog.DateTime</span></p>
+            @*<p class="tagGo">Tags: <a href="/Tag/Index/@blog.Tag.ID">@blog.BlogTags.First().</a></p>*@
+
+        }
+
+        <p class="indexGo"><a href="/Blog/Index/">Index</a></p>
+        <hr />
+    </div>
+    </body>
+
+</html>

@@ -10,7 +10,7 @@ namespace MasteryBlog2.Repositories
             void Create(T obj);
             void Delete(T obj);
             void Edit(T obj);
-            IEnumerable<T> GetByTagID(int id);
+            IEnumerable<T> GetByTagId(int tagId);
 
     }
 

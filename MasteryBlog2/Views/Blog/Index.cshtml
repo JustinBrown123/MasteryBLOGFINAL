@@ -22,6 +22,7 @@
         @foreach (var blog in Model)
         {
             <article>
+<<<<<<< Updated upstream
                 <div class="flex-container">
                     <div class="card">
                         <div>
@@ -35,6 +36,12 @@
                     </div>
                 </div>
                         <p><div id="date/time"> Left at @blog.DateTime</div></p>
+=======
+                <h3>@blog.Title</h3>
+                <p>By blogger: @blog.Reviewer @blog.CategoryId </p>
+                <p><img src="@blog.Image" /></p>
+                <p><a href="/Blog/Details/@blog.Id"><span> @blog.Body</span></a></p> <div id="date/time"> Left at @blog.DateTime</div>
+>>>>>>> Stashed changes
             </article>
 
         }

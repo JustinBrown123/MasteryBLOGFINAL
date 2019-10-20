@@ -51,7 +51,7 @@ namespace MasteryBlog2.Repositories
 
 
 
-        public IEnumerable<Category> GetByTagID(int id)
+        public IEnumerable<Category> GetByTagId(int id)
         {
             throw new NotImplementedException();
         }
