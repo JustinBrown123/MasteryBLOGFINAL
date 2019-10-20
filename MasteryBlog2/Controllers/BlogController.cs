@@ -22,7 +22,7 @@ namespace MasteryBlog2.Controllers
             var model = blogRepo.GetAll();
             return View(model);
         }
-        public ViewResult Details(int id)
+        public ViewResult GetByCategoryId(int id)
         {
             var model = blogRepo.GetById(id);
 

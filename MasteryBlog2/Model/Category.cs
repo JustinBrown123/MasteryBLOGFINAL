@@ -11,9 +11,9 @@ namespace MasteryBlog2.Model
         public int Id { get; set; }
 
         public string Genre { get; set; }
-
-
         public virtual ICollection<Blog> Blogs { get; set; }
+
+        //public virtual Blog Blogs { get; set; }
 
         public Category()
         {

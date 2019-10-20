@@ -60,5 +60,10 @@ namespace MasteryBlog2.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Tag> GetByCategoryId(int categoryId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

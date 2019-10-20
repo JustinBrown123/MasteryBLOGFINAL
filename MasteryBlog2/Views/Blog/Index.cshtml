@@ -21,28 +21,26 @@
     <div id="blog">
         @foreach (var blog in Model)
         {
-            <article>
-<<<<<<< Updated upstream
-                <div class="flex-container">
-                    <div class="card">
-                        <div>
-                            <h2>@blog.Title</h2>
-                            <p>By blogger: @blog.Reviewer  </p>
-                            <p><img class="blogIMG" img src="@blog.Image" />
-                        </div>
-                        <div>
-                            <p><span>@blog.Id"></span>@blog.Id"<span> @blog.Body</span></p>
-                        </div>
+        <article>
+
+            <div class="flex-container">
+                <div class="card">
+                    <div>
+                        <h2>@blog.Title</h2>
+                        <p>
+                            By blogger: @blog.Reviewer<img class="blogIMG" img src="@blog.Image" />
+                        </p>
+                    </div>
+                    <div>
+                        <p><span> @blog.Body</span></p>
                     </div>
                 </div>
-                        <p><div id="date/time"> Left at @blog.DateTime</div></p>
-=======
-                <h3>@blog.Title</h3>
-                <p>By blogger: @blog.Reviewer @blog.CategoryId </p>
-                <p><img src="@blog.Image" /></p>
-                <p><a href="/Blog/Details/@blog.Id"><span> @blog.Body</span></a></p> <div id="date/time"> Left at @blog.DateTime</div>
->>>>>>> Stashed changes
-            </article>
+            </div>
+            <p><div id="date/time"> Left at @blog.DateTime</div></p>
+
+            <p><a class="butn" href="/blog/Delete/@blog.Id"><input type="submit" value="Delete Review" class="btn btn-default" /></a></p>
+
+        </article>
 
         }
 

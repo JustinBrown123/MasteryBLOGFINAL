@@ -65,5 +65,14 @@ namespace MasteryBlog2.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Category> GetByCategoryId(int categoryId)
+        {
+            var categories = db.Blogs.Where(t => t.CategoryId == categoryId)
+            .Select(b => b.Category);
+            return categories;
+
+
+        }
     }
 }

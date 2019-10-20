@@ -11,7 +11,9 @@ namespace MasteryBlog2.Repositories
             void Delete(T obj);
             void Edit(T obj);
             IEnumerable<T> GetByTagId(int tagId);
+        IEnumerable<T> GetByCategoryId(int categoryId);
+
 
     }
 
-    }
+}
