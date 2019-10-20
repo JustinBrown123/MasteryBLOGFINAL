@@ -8,6 +8,10 @@ body{
     height: 320px;
     width: 260px;
 }
+
+.flex-container{
+    display: flex;
+}
 h1 {
     padding: 20px;
     text-align: center;
@@ -20,4 +24,9 @@ footer{
     text-align: center;
     background: #0a0909;
     color: whitesmoke;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
 }
