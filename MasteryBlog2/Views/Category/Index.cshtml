@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MasteryBlog2.Model.Category>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BBB-S: Categories</title>
+    <link rel="stylesheet" href="~/Styles/Style.css" />
+</head>
+<body>
+    <h1>Book Bro's Blogs By Category</h1>
+    <section>
+        @foreach (var category in Model)
+        {
+
+            <article>
+                <p><a href="/Category/GetByCategoryId/@category.Id">@category.Genre</a></p>
+            </article>
+        }
+    </section>
+
+    <nav>
+        <a href="/Blog/Index">HomePage</a>
+        <a href="/Category/index">Category</a>
+        <a href="/Tag/Index">Tags</a>
+        <a href="/Blog/Create">Create a BLOG!!!</a>
+
+    </nav>
+    <footer>
+        &copy; 2019 Book Bro's Blog
+    </footer>
+
+</body>
+</html>

@@ -12,6 +12,7 @@ namespace MasteryBlog2.Repositories
     {
         private BlogContext db;
 
+
         public BlogRepository(BlogContext db)
         {
             this.db = db;
@@ -58,9 +59,22 @@ namespace MasteryBlog2.Repositories
             db.SaveChanges();
         }
 
-        public IEnumerable<Blog> GetByTagID(int id)
+        public IEnumerable<Blog> GetByTagId(int tagId)
+        {
+            var blogs = db.TagBlogs.Where(t => t.TagId == tagId)
+            .Select(b => b.Blogs);
+            return blogs;
+        }
+        public IEnumerable<Blog> GetByCategoryId(int categoryId)
         {
             throw new NotImplementedException();
+            //var blogs = db.Categories.Where(t => t.Id == categoryId)
+            //.Select(b => b.Blogs);
+            //return blogs;
         }
+
+
+
+
     }
 }

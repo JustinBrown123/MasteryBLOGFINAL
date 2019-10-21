@@ -1,0 +1,79 @@
+﻿@model MasteryBlog2.Model.Blog
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BBB-S: Delete a Review</title>
+    <link rel="stylesheet" href="~/Styles/Style.css" />
+</head>
+<body>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Blog</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Body)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Body)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Reviewer)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Reviewer)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DateTime)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DateTime)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Category.Id)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </form>
+
+        <nav>
+            <a href="/Blog/Index">HomePage</a>
+            <a href="/Category/index">Category</a>
+            <a href="/Tag/Index">Tags</a>
+            <a href="/Blog/Create">Create a BLOG!!!</a>
+
+        </nav>
+        <footer>
+            &copy; 2019 Book Bro's Blog
+        </footer>
+    </div>
+</body>
+</html>

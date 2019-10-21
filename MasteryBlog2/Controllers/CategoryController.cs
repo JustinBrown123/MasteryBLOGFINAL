@@ -12,7 +12,8 @@ namespace MasteryBlog2.Controllers
     {
 
 
-            IRepository<Category> categoryRepo;
+        IRepository<Category> categoryRepo;
+
             public CategoryController(IRepository<Category> categoryRepo)
             {
                 this.categoryRepo = categoryRepo;
@@ -21,14 +22,14 @@ namespace MasteryBlog2.Controllers
             public ViewResult Index()
             {
                 var model = categoryRepo.GetAll();
-
                 return View(model);
             }
-
-            //public ViewResult Details(int id)
-            //{
-            //    var model = categoryRepo.GetById(id);
-            //    return View(model);
-            //}
+        public ViewResult GetByCategoryId(int id)
+        {
+            var model = categoryRepo.GetById(id);
+            return View(model);
         }
+
+
     }
+}

@@ -106,8 +106,25 @@ namespace MasteryBlog2.Data
             new Category()     
             {
                 Id = 2,
-                Genre = "Erotica",
-            });
+                Genre = "Adult",
+            },
+            new Category()
+            {
+                Id = 3,
+                Genre = "Horror",
+            },
+             new Category()
+             {
+                 Id = 4,
+                 Genre = "Sci-Fi",
+             },
+              new Category()
+              {
+                  Id = 5,
+                  Genre = "Non-Fiction",
+              }
+
+            );
             modelBuilder.Entity<TagBlog>().HasData(
             new TagBlog()
              {

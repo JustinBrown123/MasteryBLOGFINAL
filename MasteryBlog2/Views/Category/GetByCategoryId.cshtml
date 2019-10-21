@@ -1,0 +1,55 @@
+﻿@model MasteryBlog2.Model.Category
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BBB-S: Categories</title>
+    <link rel="stylesheet" href="~/Styles/Style.css" />
+</head>
+<body>
+    <h1>Book Bro's Blogs </h1>
+    <div>
+        <div id="genre">
+            <span>@Model.Genre</span>
+
+        </div>
+
+
+        @foreach (var blog in Model.Blogs)
+        {
+            <p>img src=@blog.Image</p>
+
+            <p>Author: <span>@blog.Reviewer</span></p>
+            @*<p class="genreGo">Genre: <a href="/Category/Index/">@Model.CategoryId</a></p>*@
+            <p>Blog: <span>@blog.Body</span></p>
+            <p>Publish Date: <span>@blog.DateTime</span></p>
+        }
+
+        @*@foreach (var tag in Model.TagBlogs)
+            {
+                <p class="tagGo">Tags: <a href="/Tag/Index/@tag.Tags.Id">@tag.Tags.Content</a></p>
+
+            }*@
+
+        <p class="indexGo"><a href="/Blog/Index/">Index</a></p>
+        <hr />
+    </div>
+    <nav>
+        <a href="/Blog/Index">HomePage</a>
+        <a href="/Category/index">Category</a>
+        <a href="/Tag/Index">Tags</a>
+        <a href="/Blog/Create">Create a BLOG!!!</a>
+
+    </nav>
+    <footer>
+        &copy; 2019 Book Bro's Blog
+    </footer>
+</body>
+</html>

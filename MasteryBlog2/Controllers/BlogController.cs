@@ -22,26 +22,26 @@ namespace MasteryBlog2.Controllers
             var model = blogRepo.GetAll();
             return View(model);
         }
-        public ViewResult Details(int id)
+        public ViewResult GetByCategoryId(int id)
         {
             var model = blogRepo.GetById(id);
 
             return View(model);
         }
 
-        public ViewResult BlogByTagID(int id)
+        public ViewResult BlogByTagId(int id)
         {
-            var model = blogRepo.GetByTagID(id);
+            var model = blogRepo.GetByTagId(id);
             return View(model);
         }
 
-        //[HttpPost]
-        //public ActionResult Create(Blog blog)
-        //{
-        //    blog.DateTime = DateTime.Now;
-        //    blogRepo.Create(blog);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost]
+        public ActionResult Create(Blog blog)
+        {
+            blog.DateTime = DateTime.Now;
+            blogRepo.Create(blog);
+            return RedirectToAction("Index");
+        }
 
         [HttpGet]
         public ViewResult Create()
@@ -63,13 +63,13 @@ namespace MasteryBlog2.Controllers
             return View(model);
         }
 
-        //[HttpPost]
-        //public ActionResult Edit(Blog blog)
-        //{
-        //    blog.DateTime = DateTime.Now;
-        //    blogRepo.Edit(blog);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost]
+        public ActionResult Edit(Blog blog)
+        {
+         
+            blogRepo.Edit(blog);
+            return RedirectToAction("Index");
+        }
 
         [HttpGet]
         public ViewResult Edit(int id)
