@@ -24,7 +24,7 @@
 
         @foreach (var blog in Model.Blogs)
         {
-            <p>img src=@blog.Image</p>
+            <p><img src=@blog.Image></p>
 
             <p>Author: <span>@blog.Reviewer</span></p>
             @*<p class="genreGo">Genre: <a href="/Category/Index/">@Model.CategoryId</a></p>*@
@@ -33,10 +33,10 @@
         }
 
         @*@foreach (var tag in Model.TagBlogs)
-            {
-                <p class="tagGo">Tags: <a href="/Tag/Index/@tag.Tags.Id">@tag.Tags.Content</a></p>
+        {
+            <p class="tagGo">Tags: <a href="/Tag/Index/@tag.Tags.Id">@tag.Tags.Content</a></p>
 
-            }*@
+        }*@
 
         <p class="indexGo"><a href="/Blog/Index/">Index</a></p>
         <hr />

@@ -20,12 +20,12 @@
         <h4>Blog</h4>
         <hr />
         <dl class="dl-horizontal">
-            <dt>
+            @*<dt>
                 @Html.DisplayNameFor(model => model.Image)
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.Image)
-            </dd>
+            </dd>*@
             <dt>
                 @Html.DisplayNameFor(model => model.Title)
             </dt>
@@ -44,7 +44,7 @@
             <dd>
                 @Html.DisplayFor(model => model.Reviewer)
             </dd>
-            <dt>
+            @*<dt>
                 @Html.DisplayNameFor(model => model.DateTime)
             </dt>
             <dd>
@@ -55,7 +55,7 @@
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.Category.Id)
-            </dd>
+            </dd>*@
         </dl>
 
         <form asp-action="Delete">
